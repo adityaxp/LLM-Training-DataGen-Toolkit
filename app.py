@@ -23,7 +23,7 @@ def cudaDeviceSetup():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def intialSetup():
+def initialSetup():
     global embedding_model
     global chroma_client
     global collection
@@ -101,9 +101,9 @@ def greetAndSetupDialog(display):
         bg="black",
         fg="yellow")
     greeting.pack()
-    print("Intial setup running....\nThis may take a while")
+    print("initial setup running....\nThis may take a while")
     cudaDeviceSetup()
-    intialSetup()
+    initialSetup()
     vectorDBSetup()
     print("Setup Complete!")
     window.after(display, window.destroy)  
