@@ -101,7 +101,7 @@ def greetAndSetupDialog(display):
         bg="black",
         fg="yellow")
     greeting.pack()
-    print("initial  setup running....\nThis may take a while")
+    print("Intial setup running....\nThis may take a while")
     cudaDeviceSetup()
     initialSetup()
     vectorDBSetup()
