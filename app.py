@@ -77,7 +77,7 @@ def createContext():
     global contextPromptText
     global systemTrainPromptText
     context = getContext(setPrompt(promptNum))
-    contextPromptText = f"""CONTEXT: {context}\QUESTION: {setPrompt(promptNum)}\nBased on the give context give answer or take relevant part from the context to form the answer. Keep the  answer simple and short paragraph."""
+    contextPromptText = f"""CONTEXT: {context}\nQUESTION: {setPrompt(promptNum)}\nBased on the give context give answer or take relevant part from the context to form the answer. Keep the  answer simple and short paragraph."""
     contextPrpmpt.delete('1.0', tk.END)
     contextPrpmpt.insert('1.0', contextPromptText)
     systemTrainPromptText = f'''[INST] Give answer for the question  based on the context provided. Based on the give context give answer or take relevant part from the context to form the answer.Keep the  answer simple and short.Question: {setPrompt(promptNum)}Context : {context}[/INST]'''
